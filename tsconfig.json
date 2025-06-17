@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/dashboard_ui/*": ["src/components/dashboard_ui/*"],
+      "@/components/dashboard_navigation/*": ["src/components/dashboard_navigation/*"],
+      "@/components/dashboard_filters/*": ["src/components/dashboard_filters/*"],
+      "@/components/dashboard/*": ["src/components/dashboard/*"],
+      "@/hooks/dashboard_hooks/*": ["src/hooks/dashboard_hooks/*"],
+      "@/lib/dashboard_lib/*": ["src/lib/dashboard_lib/*"]
+    },
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false
+  }
+}
