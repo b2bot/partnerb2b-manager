@@ -66,7 +66,8 @@ export interface SheetRow {
 }
 
 const fetchData = async (platform: string, sheetId: string, sheetRange: string): Promise<SheetRow[]> => {
-  const url = `https://gsheets-api.vercel.app/api/read?sheetId=${sheetId}&range=${sheetRange}`;
+  const apiBase = import.meta.env.VITE_GSHEETS_API_URL;
+  const url = `${apiBase}/api/read?sheetId=${sheetId}&range=${sheetRange}`;
   const response = await fetch(url);
   const json = await response.json();
 
